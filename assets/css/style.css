@@ -1,0 +1,135 @@
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --ligh-gray: hsl(0, 0%, 81%);
+  --ligh-grayish-blue: hsl(210, 46%, 95%);
+
+  --font: "Barlow Semi Condensed", sans-serif;
+}
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+  font-family: var(--font);
+  font-size: 62.5%;
+
+  background-color: #edf2f8;
+}
+main {
+  display: grid;
+  gap: 1.5rem;
+  margin: 5rem 1.5rem;
+  box-shadow: 5px 10px 8px #d5dfeb;
+}
+section {
+  display: grid;
+  padding: 20px 22px 30px;
+  border-radius: 10px;
+}
+
+section > .voter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Daniel {
+  background-color: var(--moderate-violet);
+  position: relative;
+}
+
+.Daniel > .voter:after {
+  content: url(../images/bg-pattern-quotation.svg);
+
+  position: absolute;
+  top: 0.1rem;
+  right: 2rem;
+}
+section > .voter > .voter-image > img {
+  width: 32px;
+  margin-right: 10px;
+  border-radius: 50%;
+  justify-self: start;
+}
+
+section.Daniel > .voter > .voter-image > img,
+section.Patrick > .voter > .voter-image > img {
+  border: 2px solid #a775f2;
+}
+
+section > .voter > .voter-name > span {
+  display: block;
+}
+
+.voter > .voter-name,
+.vote-title {
+  color: var(--ligh-grayish-blue);
+
+  margin-bottom: 1rem;
+  width: 96%;
+}
+.vote-title {
+  margin-top: 1.2rem;
+}
+.Jeanette > .voter > .voter-name,
+.Jeanette > .vote-title,
+.Kira > .voter > .voter-name,
+.Kira > .vote-title {
+  color: #000;
+}
+.voter > .voter-name {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.vote-title {
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+.voter > .voter-name > span,
+.vote-description {
+  color: rgb(255, 255, 255, 0.7);
+  opacity: 0.7;
+  font-size: 0.8rem;
+  width: 96%;
+}
+.Jeanette > .voter > .voter-name > span,
+.Jeanette > .vote-description,
+.Kira > .voter > .voter-name > span,
+.Kira > .vote-description {
+  color: #424040;
+}
+.voter > .voter-name > span {
+  margin-top: 0;
+}
+.vote-description {
+  line-height: 1.25rem;
+}
+
+.jonathan {
+  background-color: var(--very-dark-grayish-blue);
+}
+.Jeanette {
+  background-color: var(--white);
+}
+.Patrick {
+  background-color: var(--very-dark-blackish-blue);
+}
+.Kira {
+  background-color: var(--white);
+}
+ /* ---------------------- Media Query -------------------------- */
+@media(min-width:520px) {
+  
+}
