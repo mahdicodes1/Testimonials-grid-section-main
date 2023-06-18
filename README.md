@@ -7,7 +7,7 @@
 
 # **Challenge Name**
 
-- ### [Testimonials grid section main](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-main-qY-nHw6GZX)
+- ### [Testimonials grid section main](https://www.frontendmentor.io/solutions/testimonials-grid-section-main-Ma1PZ8dkl8)
 
 <br>
 
