@@ -32,6 +32,17 @@ main {
   gap: 1.5rem;
   margin: 5rem 1.5rem;
 }
+.main--sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 section {
   display: grid;
   grid-template-rows: unset;
