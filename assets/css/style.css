@@ -22,19 +22,22 @@ body {
 
   font-family: var(--font);
   font-size: 62.5%;
+  height: 100vh;
 
   background-color: #edf2f8;
 }
 main {
+  max-width: 520px;
   display: grid;
   gap: 1.5rem;
   margin: 5rem 1.5rem;
-  box-shadow: 5px 10px 8px #d5dfeb;
 }
 section {
   display: grid;
+  grid-template-rows: unset;
   padding: 20px 22px 30px;
   border-radius: 10px;
+  box-shadow: 20px 15px 20px #d3dae2;
 }
 
 section > .voter {
@@ -57,7 +60,7 @@ section > .voter {
 }
 section > .voter > .voter-image > img {
   width: 32px;
-  margin-right: 10px;
+  margin-right: 15px;
   border-radius: 50%;
   justify-self: start;
 }
@@ -69,52 +72,52 @@ section.Patrick > .voter > .voter-image > img {
 
 section > .voter > .voter-name > span {
   display: block;
+  margin-top: 1px;
 }
 
 .voter > .voter-name,
 .vote-title {
   color: var(--ligh-grayish-blue);
-
   margin-bottom: 1rem;
-  width: 96%;
-}
-.vote-title {
-  margin-top: 1.2rem;
+  width: 92.5%;
 }
 .Jeanette > .voter > .voter-name,
 .Jeanette > .vote-title,
 .Kira > .voter > .voter-name,
 .Kira > .vote-title {
-  color: #000;
+  color: hsl(217, 19%, 35%, 90%);
 }
 .voter > .voter-name {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: normal;
   margin-bottom: 0;
 }
 .vote-title {
   position: relative;
-  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  font-size: 1.248rem;
   line-height: 1.5rem;
 }
 .voter > .voter-name > span,
 .vote-description {
   color: rgb(255, 255, 255, 0.7);
   opacity: 0.7;
-  font-size: 0.8rem;
-  width: 96%;
+  font-size: 0.7rem;
+  width: 87.2%;
 }
 .Jeanette > .voter > .voter-name > span,
 .Jeanette > .vote-description,
 .Kira > .voter > .voter-name > span,
 .Kira > .vote-description {
-  color: #424040;
+  color: hsl(0, 0%, 50%);
 }
 .voter > .voter-name > span {
   margin-top: 0;
 }
 .vote-description {
-  line-height: 1.25rem;
+  line-height: 1.1rem;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
 }
 
 .jonathan {
@@ -129,7 +132,56 @@ section > .voter > .voter-name > span {
 .Kira {
   background-color: var(--white);
 }
- /* ---------------------- Media Query -------------------------- */
-@media(min-width:520px) {
-  
+/* ---------------------- Media Query -------------------------- */
+@media (min-width: 1140px) {
+  main {
+    max-width: 1110px;
+    grid-template-areas:
+      "one one two three"
+      "four five five three";
+    grid-template-columns: 255px 255px 255px;
+    grid-template-rows: 282px 267px;
+    gap: 1.5rem 1.7rem;
+  }
+  .Daniel {
+    grid-area: one;
+    padding-right: 11px;
+  }
+  .jonathan {
+    grid-area: two;
+  }
+  .Jeanette {
+    grid-area: four;
+    padding-right: 40px;
+  }
+  .Patrick {
+    grid-area: five;
+    padding-bottom: 22px;
+    padding-right: 30px;
+  }
+  .voter > .voter-name > span,
+  .vote-description {
+    width: 96%;
+  }
+  .Jeanette > .vote-description,
+  .Patrick > .vote-description {
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .Kira {
+    grid-area: three;
+  }
+  section {
+    padding: 20px 37px 22px 30px;
+    grid-template-rows: 40px 1fr 1fr;
+  }
+  .voter > .voter-name,
+  .vote-title {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .Daniel > .voter:after {
+    right: 5rem;
+  }
 }
